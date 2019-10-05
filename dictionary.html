@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <h1>English</h1>
+      <input type="text" id="input1">
+      <h1>Vietnamese</h1>
+      <input type="text" id="input2">
+      <button type ="button" onclick= "showResult()" id="button1">Translate</button>
+
+
+     <script>
+         let input1;
+         let input2;
+         let england= ['cat','fish','bird', 'tiger', 'lion', 'chicken', 'duck', 'dog'];
+         let vietnam= ['con mèo', 'con cá', 'con chim', 'con hổ', 'sư tử', 'con gà', 'con vịt', 'con chó'];
+         function showResult() {
+             input1 = document.getElementById("input1").value;
+             if(england.indexOf(input1)==-1) {
+                 input2= "không tìm thấy";
+             }else {
+                 input2= vietnam[england.indexOf(input1)];
+             }
+
+               document.getElementById("input2").value=input2;
+         }
+
+     </script>
+
+
+</body>
+</html>
